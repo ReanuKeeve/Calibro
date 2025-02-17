@@ -2,13 +2,13 @@
 Host Grotesk
 Merriweather Sans
 */
-* {
-    font-family: Merriweather Sans;
-}
-
 @font-face {
     font-family: Calibro;
-    src: url(./fonts/Calibro.ttf);
+    src: url(./Calibro.ttf);
+}
+* {
+    font-family: Merriweather Sans;
+    overflow-x: none;
 }
 
 body {
@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-    max-height: fit-content;
+    max-height: 40px;
 }
 
 nav ul {
@@ -39,7 +39,7 @@ nav ul {
     gap: 20px;
     padding: 0;
     margin: 0;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 nav ul li {
@@ -62,8 +62,8 @@ nav ul li a:hover {
     text-align: center;
     background-color: #222;
     color: white;
-    padding: 100px 0 0 0;
-    height: 1080px;
+    height: fit-content;
+    overflow: none;
 }
 
 #hero button {
@@ -91,8 +91,8 @@ nav ul li a:hover {
 }
 
 video {
-    position: relative;
-    bottom: 80px;
+    width: 100%;
+    height: auto;
 }
 
 /* Services Section */
