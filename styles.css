@@ -6,11 +6,11 @@ Merriweather Sans
     font-family: Calibro;
     src: url(./Calibro.ttf);
 }
-* {
-    font-family: Merriweather Sans;
-    overflow-x: none;
-}
 
+* {
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden; 
+}
 body {
     margin: 0;
     padding: 0;
@@ -27,6 +27,10 @@ header {
     padding: 10px 20px;
     z-index: 1000;
     font-family: Calibro;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -83,9 +87,9 @@ nav ul li a:hover {
 
 .overlap {
     position: relative;
+    bottom: 580px;
     z-index: 3;
     background-color: #22222299;
-    bottom: 580px;
     padding: 24px 0;
     font-family: Host Grotesk;
 }
@@ -97,11 +101,14 @@ video {
 
 /* Services Section */
 #services {
+    background-color: #222;
+    color: #f2dede;
     text-align: center;
     padding: 50px 20px;
     font-family: Host Grotesk;
     font-size: large;
     font-weight: 500;
+    margin-top: -200px;
 }
 
 .service-list {
@@ -112,12 +119,21 @@ video {
 }
 
 .service-item {
-    background: white;
+    background: #3f3f3f;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 8px rgb(0, 0, 0);
     width: 250px;
+    opacity: 0;
+    transform: translateY(30px);
 }
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 
 /* Testimonials */
 #testimonials {
