@@ -140,9 +140,35 @@ video {
     font-family: Host Grotesk;
     font-size: larger;
     background-color: #ff7300;
-    color: ca9569;
+    color: #222;
     text-align: center;
     padding: 50px 20px;
+}
+
+/* Socials */
+#contacts {
+    font-family: Host Grotesk;
+    font-size: larger;
+    background-color: #ff7300;
+    color: #222;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 15px;
+}
+
+.social {
+    background: #3f3f3f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgb(0, 0, 0);
+    width: 250px;
+    color: #f2dede;
 }
 
 /* Footer */
