@@ -1,6 +1,6 @@
 /*
-Host Grotesk
-Merriweather Sans
+'Host Grotesk'
+'Merriweather Sans'
 */
 @font-face {
     font-family: Calibro;
@@ -12,11 +12,17 @@ Merriweather Sans
     overflow-x: hidden; 
 }
 body {
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #000;
+    max-width: 100%;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}   
 
 /* Header Styling */
 header {
@@ -38,27 +44,29 @@ header {
 }
 
 nav ul {
+    height: fit-content;
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
+    padding-right: 40px;
     margin: 0;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 nav ul li {
     display: inline;
+    height: fit-content;
 }
 
 nav ul li a {
     text-decoration: none;
     color: rgb(35, 36, 41);
-
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: black;
+    height: max-content;
+    color: rgb(255, 255, 255);
 }
 
 /* Hero Section */
@@ -67,7 +75,8 @@ nav ul li a:hover {
     background-color: #222;
     color: white;
     height: fit-content;
-    overflow: none;
+    overflow: hidden;
+    width: 100%;
 }
 
 #hero button {
@@ -95,12 +104,14 @@ nav ul li a:hover {
 }
 
 video {
+    align-self: center;
     width: 100%;
     height: auto;
 }
 
 /* Services Section */
 #services {
+    overflow: hidden;
     background-color: #222;
     color: #f2dede;
     text-align: center;
@@ -124,14 +135,6 @@ video {
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgb(0, 0, 0);
     width: 250px;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 
@@ -167,7 +170,7 @@ video {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgb(0, 0, 0);
-    width: 250px;
+    width: fit-content;
     color: #f2dede;
 }
 
@@ -179,3 +182,57 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Bookiung Section */
+#book-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#book-form h2 {
+    margin-bottom: 20px;
+    color: #ff7300;
+}
+
+#book-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#book-form input,
+#book-form select,
+#book-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#book-form button {
+    background-color: #ff7300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#book-form button:hover {
+    background-color: #e65c00;
+}
+
+.hidden {
+    display: none;
+}   
+
+.show {
+    display: block;
+}   

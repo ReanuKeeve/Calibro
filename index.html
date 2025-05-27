@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calibro Detailing Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;700&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="./logo (2).jpg" alt="Calibro Detailing Studio Logo" class="logo">
+        <img src="./logo_2.jpg" alt="Calibro Detailing Studio Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#hero">HOME</a></li>
                 <li><a href="#services">SERVICES</a></li>
-                <li><a href="#testimonials">TESTIMONIALS</a></li>
-                <li><a href="#book">BOOK NOW</a></li>
+                <li><a href="#book">BOOK</a></li>
             </ul>
         </nav>
     </header>
@@ -26,6 +31,7 @@
     <section id="hero">
         <video autoplay muted loop>
             <source src="./Calibro main page.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video> 
         <div class="overlap">
             <h2>Professional Mobile Detailing Services</h2>
@@ -44,7 +50,7 @@
                 <p><strong>$35 per Headlight</strong></p>
             </div>
             <div class="service-item">
-                <h3>Separate Body Polishing</h3>
+                <h3>Body Polishing</h3>
                 <p>Polish from hood to trunk.</p>
                 <p><strong>from $70</strong></p>
             </div>
@@ -60,30 +66,68 @@
             </div>
             <div class="service-item">
                 <h3>Odor Removal</h3>
-                <p>Freshness additive to your wheels.</p>
-                <p><strong>$35</strong></p>
+                <p>Freshness additive to your vehicle.</p>
+                <p><strong>$50</strong></p>
+            </div>
+            <div class="service-item">
+                <h3>Detailing Subscription</h3>
+                <p>Regular service for your vehicle</p>
+                <p><strong>Get a quote</strong></p>
             </div>
         </div>
     </section>
     
-    <section id="testimonials">
-        <h2>What Our Customers Say</h2>
-        <p>"Fantastic service! My car looks brand new." - John D.</p>
-        <p>"Highly recommended. Great attention to detail!" - Sarah L.</p>
-    </section>
     <section id="contacts">
         <p>Follow us on socials</p>
         <div id="socials">
-            <div class="social">Instagram</div>
-            <div class="social">Facebook</div>
-            <div class="social">X</div>
+            <div class="social">
+                <img src="./instagram_logo_white.svg" alt="Instagram Logo">
+            </div>
+            <div class="social">
+                <img src="./facebook_logo.svg" alt="Facebook Logo">
+            </div>
+            <div class="social">
+                <img src="./x_logo.svg" alt="X Logo">
+            </div>
         </div>
     </section>
+    <form id="book-form" class="hidden">
+        <h2>Book a Service</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" name="phone"  required>
+
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <option value="headlight-polish">Headlight Polishing</option>
+            <option value="body-polish">Body Polishing</option>
+            <option value="full-detailing">Full Detailing</option>
+            <option value="full-deteiling">Full Detailing</option>
+            <option value="odor-removal">Odor Removal</option>
+            <option value="subscription">Detailing Subscription</option>
+        </select>
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <div class="alert alert-info hidden"></div>
+</body>
     
     <footer>
-        <p>&copy; 2025 Calibro Detailing Studio. All Rights Reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Calibro Detailing Studio. All Rights Reserved.</p>
+        <p><a target="_blank" href="https://icons8.com/icon/32292/instagram">Instagram Logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
     </footer>
+
     
-    <script src="script.js"></script>
-</body>
+    <script src="script.js" defer></script>
 </html>
