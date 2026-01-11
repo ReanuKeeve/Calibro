@@ -12,7 +12,8 @@
     overflow-x: hidden; 
 }
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -37,6 +38,10 @@ header {
     top: 0;
     width: 100%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -135,6 +140,14 @@ video {
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgb(0, 0, 0);
     width: 250px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -192,6 +205,7 @@ footer {
     max-width: 500px;
     margin: 20px auto;
     font-family: 'Merriweather Sans', sans-serif;
+    scroll-margin-top: 90px;
 }
 
 #book-form h2 {
@@ -213,6 +227,19 @@ footer {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#book-form .iti {
+    width: 100%;
+}
+
+#book-form .iti input[type="tel"] {
+    padding-left: 60px;
+}
+
+#book-form .iti__selected-flag {
+    padding: 0 10px;
 }
 
 #book-form button {
